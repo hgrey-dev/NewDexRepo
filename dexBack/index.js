@@ -21,8 +21,8 @@ app.get("/tokenPrice", async (req, res) => {
   });
 
  const usdPrices = {
-  tokenOne: responseOne.raw.usdPrice,
-  tokenTwo: responseTwo.raw.usdPrice,
+  tokenOne: responseOne.raw.usdPrice, 
+  tokenTwo: responseTwo.raw.usdPrice, 
   ratio: responseOne.raw.usdPrice/responseTwo.raw.usdPrice,
  }
 
@@ -33,6 +33,6 @@ Moralis.start({
   apiKey: process.env.MORALIS_KEY,
 }).then(() => {
   app.listen(port, () => {
-    console.log(`Listening for API Calls`);
+    console.log(`Listening for API Calls`); 
   });
 });  
